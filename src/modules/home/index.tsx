@@ -3,7 +3,7 @@ import type { RootState } from '@/store'
 
 import MainLayout from '@/layouts/MainLayout';
 
-const HomePage = () => {
+const Home = () => {
   const { user, loading } = useSelector((state: RootState) => state.user)
   
   return (
@@ -11,4 +11,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
