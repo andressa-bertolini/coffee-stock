@@ -1,13 +1,8 @@
-import { useSelector } from 'react-redux'
-import type { RootState } from '@/store'
-
 import MainLayout from '@/layouts/MainLayout';
 
-const Home = () => {
-  const { user, loading } = useSelector((state: RootState) => state.user)
-  
+const Home = () => {  
   return (
-    <MainLayout>nome:{user?.name}</MainLayout>
+    <MainLayout>Home</MainLayout>
   );
 };
 
