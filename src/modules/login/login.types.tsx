@@ -11,9 +11,10 @@ export interface User {
 }
 
 export interface LoginState {
+  token: string | null;
+  isAuthenticated: boolean;
   loading: boolean;
   error: string | null;
-  token: string | null;
 }
 
 export interface UserState {

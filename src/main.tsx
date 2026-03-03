@@ -32,7 +32,7 @@ enableMocking().then(() => {
   createRoot(document.getElementById('root')!).render(
       <StrictMode>
         <Provider store={store}>
-          <BrowserRouter>
+          <BrowserRouter basename="/stobe">
             <ThemeProvider theme={theme}>
               <CssBaseline />
               <App />

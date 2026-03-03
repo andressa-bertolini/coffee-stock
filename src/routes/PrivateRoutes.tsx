@@ -5,12 +5,12 @@ import type { ReactNode } from "react";
 
 const PrivateRoute = ({ children }: { children: ReactNode }) => {
   const { branchId } = useParams();
-  // const isAuthenticated = useSelector((state: RootState) => state.user.isAuthenticated);
+  const isAuthenticated = useSelector((state: RootState) => state.login?.isAuthenticated);
   const firstBranch = useSelector((state: RootState) => state.user.user?.branches?.[0]);
 
-  // if (!isAuthenticated) {
-  //   return <Navigate to="/login" replace />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
 
   if (!branchId && firstBranch) {
     return <Navigate to={`/${firstBranch}`} replace />;

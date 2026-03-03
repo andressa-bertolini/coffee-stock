@@ -3,6 +3,7 @@ import type { LoginState } from './login.types';
 
 const initialState: LoginState = {
   token: 'fake_token',
+  isAuthenticated: true,
   loading: false,
   error: null,
 };

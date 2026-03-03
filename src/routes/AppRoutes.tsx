@@ -3,7 +3,7 @@ import PrivateRoute from '@/routes/PrivateRoutes';
 
 import HomeRoutes from '@/modules/home/home.routes';
 import LoginRoutes from '@/modules/login/login.routes';
-import StockProductsRoutes from '@/modules/stock/products/stockProducts.routes';
+import ProductsRoutes from '@/modules/stock/products/products.routes';
 import StockMovementsRoutes from '@/modules/stock/movements/stockMovements.routes';
 import SalesMenuRoutes from '@/modules/sales/menu/salesMenu.routes';
 import SalesOrdersRoutes from '@/modules/sales/orders/salesOrders.routes';
@@ -16,7 +16,7 @@ const AppRoutes = () => {
         path="/:branchId/*"
         element={
           <PrivateRoute>
-            <HomeRoutes />
+            <ProductsRoutes />
           </PrivateRoute>
         }
       />
@@ -32,7 +32,7 @@ const AppRoutes = () => {
         path="/stock/products/:branchId"
         element={
           <PrivateRoute>
-            <StockProductsRoutes />
+            <ProductsRoutes />
           </PrivateRoute>
         }
       />

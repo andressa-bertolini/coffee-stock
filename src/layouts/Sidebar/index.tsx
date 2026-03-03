@@ -45,7 +45,7 @@ const Sidebar = () => {
             borderColor: 'rgba(255, 255, 255, 0.2)',
           }
         }}>
-          <ListItem disablePadding>
+          {/* <ListItem disablePadding>
             <ListItemButton 
               sx={{ pl: 4, backgroundColor: 'var(--green-300)' }}
               onClick={() => navigate(`/${branchId}`)}
@@ -56,7 +56,7 @@ const Sidebar = () => {
               <ListItemText primary='Home' />
             </ListItemButton>
           </ListItem>
-          <Divider />
+          <Divider /> */}
           <ListItem 
             disablePadding
             sx={{ pl: 2, pt: 1, pb: 1 }}
