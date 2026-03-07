@@ -15,7 +15,15 @@ const Header = () => {
   const { user } = useSelector((state: RootState) => state.user);
 
   const handleBranchChange = (event: SelectChangeEvent) => {
-    navigate(`/${event.target.value}`, { replace: true });
+    const branch = event.target.value;
+  
+    const base = "/stobe";
+    const path = location.pathname.replace(base, "");
+  
+    const parts = path.split("/");
+    parts[parts.length - 1] = branch;
+  
+    navigate(parts.join("/"), { replace: true });
   };
 
   return (

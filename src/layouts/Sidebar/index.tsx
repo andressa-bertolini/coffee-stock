@@ -1,8 +1,6 @@
 import { Drawer } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 
-// import HomeIcon from '@mui/icons-material/Home';
-//import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 
@@ -45,27 +43,6 @@ const Sidebar = () => {
             borderColor: 'rgba(255, 255, 255, 0.2)',
           }
         }}>
-          {/* <ListItem disablePadding>
-            <ListItemButton 
-              sx={{ pl: 4, backgroundColor: 'var(--green-300)' }}
-              onClick={() => navigate(`/${branchId}`)}
-            >
-              <ListItemIcon>
-                <HomeIcon/>
-              </ListItemIcon>
-              <ListItemText primary='Home' />
-            </ListItemButton>
-          </ListItem>
-          <Divider /> */}
-          {/* <ListItem 
-            disablePadding
-            sx={{ pl: 2, pt: 1, pb: 1 }}
-          >
-            <ListItemIcon>
-              <InventoryIcon/>
-            </ListItemIcon>
-            <ListItemText primary='Stock' />
-          </ListItem> */}
           <List disablePadding>
             <ListItemButton 
               sx={{ backgroundColor: 'var(--green-300)' }}
@@ -77,27 +54,7 @@ const Sidebar = () => {
               <ListItemText primary='Inventory' />
             </ListItemButton>
           </List>
-          {/* <ListItem disablePadding>
-            <ListItemButton 
-              sx={{ pl: 4, backgroundColor: 'var(--green-300)' }}
-              onClick={() => navigate(`/movements/${branchId}`)}
-            >
-              <ListItemIcon>
-                <SyncAltIcon/>
-              </ListItemIcon>
-              <ListItemText primary='Movements' />
-            </ListItemButton>
-          </ListItem> */}
           <Divider />
-          {/* <ListItem 
-            disablePadding
-            sx={{ pl: 2, pt: 1, pb: 1 }}
-          >
-            <ListItemIcon>
-              <AttachMoneyIcon/>
-            </ListItemIcon>
-            <ListItemText primary='Sales' />
-          </ListItem> */}
           <ListItem disablePadding>
             <ListItemButton 
               sx={{ backgroundColor: 'var(--green-300)' }}
@@ -109,17 +66,6 @@ const Sidebar = () => {
               <ListItemText primary='Menu' />
             </ListItemButton>
           </ListItem>
-          {/* <ListItem disablePadding>
-            <ListItemButton 
-              sx={{ pl: 4, backgroundColor: 'var(--green-300)' }}
-              onClick={() => navigate(`/orders/${branchId}`)}
-            >
-              <ListItemIcon>
-                <StorefrontIcon/>
-              </ListItemIcon>
-              <ListItemText primary='Orders' />
-            </ListItemButton>
-          </ListItem> */}
           <Divider />
         </List>
     </Drawer>

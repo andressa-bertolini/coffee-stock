@@ -4,6 +4,7 @@ import type { AppDispatch, RootState } from '@/store';
 import formatCurrency from '@/utils/formatCurrency';
 import getStockStatus from '@/utils/getStockStatus';
 import ZoomImage from '@/components/ZoomImage';
+import { useParams } from 'react-router-dom';
 
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
@@ -19,10 +20,11 @@ import { fetchInventory } from "./inventory.service";
 const Inventory = () => {
   const dispatch = useDispatch<AppDispatch>();  
   const { inventory } = useSelector((state: RootState) => state.inventory);
+  const { branchId } = useParams();
 
   useEffect(() => {
-    dispatch(fetchInventory({ page: 1, pageSize: 10 }));
-  },[]);
+    dispatch(fetchInventory({ branchId: Number(branchId), page: 1, pageSize: 10 }));
+  },[branchId]);
 
   return (
     <MainLayout>

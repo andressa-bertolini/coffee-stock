@@ -8,8 +8,10 @@ export const stockHandlers = [
     const page = Number(url.searchParams.get('page') ?? 0)
     const pageSize = Number(url.searchParams.get('pageSize') ?? 5)
     const search = url.searchParams.get('search')?.toLowerCase() ?? ''
+    const branchId = Number(url.searchParams.get('branchId'))
 
     const filtered = inventory.filter(item =>
+      item.branchId === branchId &&
       item.name.toLowerCase().includes(search)
     )
 
